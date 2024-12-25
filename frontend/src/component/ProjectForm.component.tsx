@@ -13,6 +13,11 @@ export default function ProjectForm({
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    await fetch("http://localhost:3001/api/projects", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
     onProjectCreated();
     setFormData({ name: "", targetUrl: "" });
   };

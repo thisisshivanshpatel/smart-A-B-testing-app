@@ -1,3 +1,9 @@
+import Main from "@/component/Main.component";
+
 export default function Home() {
-  return <div>A/B Testing app</div>;
+  return (
+    <>
+      <Main />
+    </>
+  );
 }
