@@ -20,7 +20,6 @@ router.post("/", async (req, res) => {
 
   const project = { id, name, targetUrl, script };
   projects.push(project);
-  console.log("hello===>", existsSync(scriptsDirectory));
 
   if (!existsSync(scriptsDirectory)) {
     console.log(`Creating scripts directory: ${scriptsDirectory}`);

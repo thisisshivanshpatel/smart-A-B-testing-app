@@ -1,7 +1,26 @@
 # A/B Testing App
 
+### For seting up and run the project
 
+```bash
+cd backend
 
+npm i
+
+npm run dev
+```
+
+```bash
+cd frontend
+
+npm i
+
+npm run dev
+```
+
+```bash
+visit localhost:3000
+```
 
 ## Frontend:
 
