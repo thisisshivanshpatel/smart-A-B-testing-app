@@ -12,9 +12,9 @@ export default function Main() {
 
   const [projects, setProjects] = useState<Project[]>([]);
 
-  // useEffect(() => {
-  //   fetchProjects();
-  // }, []);
+  useEffect(() => {
+    fetchProjects();
+  }, []);
 
   const fetchProjects = async () => {
     const res = await fetch("http://localhost:3001/api/projects");
@@ -28,10 +28,15 @@ export default function Main() {
       <ProjectForm onProjectCreated={fetchProjects} />
       <div className="mt-8">
         {projects.map((project) => (
-          <div key={project.id} className="border p-4 mb-4 rounded">
+          <div
+            key={project.id}
+            className="border p-4 mb-4 rounded overflow-auto"
+          >
             <h2 className="text-xl">{project.name}</h2>
             <p>Target URL: {project.targetUrl}</p>
-            <pre className="bg-gray-100 p-2 mt-2 rounded">{project.script}</pre>
+            <pre className="bg-gray-100 p-2 mt-2 rounded overflow-auto">
+              {project.script}
+            </pre>
           </div>
         ))}
       </div>
