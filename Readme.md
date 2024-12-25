@@ -1,5 +1,7 @@
 # A/B Testing App
 
+![App preview](image.png)
+
 ### For seting up and run the project
 
 ```bash
